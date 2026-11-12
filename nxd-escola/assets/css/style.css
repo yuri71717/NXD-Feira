@@ -1,0 +1,376 @@
+/* Estilos do sistema */
+
+/* Variaveis e tema escuro */
+:root, [data-bs-theme="dark"] {
+  --bg-main: #0c0d12;
+  --bg-sidebar: #13141b;
+  --bg-card: #181924;
+  --bg-card-header: #1e202d;
+  --bg-input: #101118;
+  --border-color: #272938;
+  --color-red: #991b1b;
+  --color-red-hover: #7f1d1d;
+  --color-white: #ffffff;
+
+  --bs-body-bg: #0c0d12;
+  --bs-body-color: #ffffff;
+  --bs-card-bg: #181924;
+  --bs-card-border-color: #272938;
+  --bs-card-cap-bg: #1e202d;
+  --bs-border-color: #272938;
+  --bs-link-color: #ffffff;
+  --bs-link-hover-color: #b91c1c;
+  --bs-danger: #991b1b;
+  --bs-danger-rgb: 153, 27, 27;
+}
+
+/* Base */
+html, body {
+  background-color: var(--bg-main) !important;
+  color: var(--color-white) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, small, label, td, th, li, a {
+  color: var(--color-white);
+}
+
+.text-muted, .text-secondary {
+  color: #f1f5f9 !important;
+}
+
+.text-danger {
+  color: #b91c1c !important;
+}
+
+/* Layout */
+.layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  background-color: var(--bg-main) !important;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
+  background-color: var(--bg-sidebar) !important;
+  border-right: 1px solid var(--border-color) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  flex-shrink: 0 !important;
+  z-index: 1000 !important;
+}
+
+.sidebar-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.sidebar-brand .brand-tag {
+  background-color: var(--color-red);
+  color: #ffffff;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.sidebar-menu {
+  padding: 15px 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #b91c1c !important;
+  padding: 8px 12px 6px 12px;
+}
+
+.sidebar-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 10px 14px !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 3px !important;
+  transition: all 0.15s ease !important;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem !important;
+  color: #b91c1c !important;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(153, 27, 27, 0.25) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.sidebar-link.active {
+  background-color: var(--color-red) !important;
+  color: #ffffff !important;
+}
+
+.sidebar-link.active i {
+  color: #ffffff !important;
+}
+
+.sidebar-footer {
+  padding: 15px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-sidebar);
+}
+
+/* Topbar e Conteudo */
+.main-wrapper {
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: var(--bg-main) !important;
+}
+
+.topbar {
+  background-color: var(--bg-sidebar) !important;
+  border-bottom: 2px solid var(--color-red) !important;
+  padding: 12px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.content-container {
+  padding: 24px 28px !important;
+  max-width: 1300px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  flex-grow: 1 !important;
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+}
+
+.card-header {
+  background-color: var(--bg-card-header) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.card-accent-red {
+  border-top: 3px solid var(--color-red) !important;
+}
+
+/* Metricas */
+.stat-card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-top: 3px solid var(--color-red);
+  border-radius: 8px !important;
+  padding: 18px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.stat-card .stat-value {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  margin-top: 6px !important;
+  color: #ffffff !important;
+}
+
+.stat-card .stat-icon {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 8px !important;
+  background-color: rgba(153, 27, 27, 0.25) !important;
+  border: 1px solid var(--color-red) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.35rem !important;
+  color: #b91c1c !important;
+}
+
+/* Botoes */
+.btn-danger {
+  background-color: var(--color-red) !important;
+  border-color: var(--color-red) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-red-hover) !important;
+  border-color: var(--color-red-hover) !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-danger {
+  border-color: var(--color-red) !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--color-red) !important;
+  border-color: var(--color-red) !important;
+  color: #ffffff !important;
+}
+
+.btn-dark {
+  background-color: #272938 !important;
+  border-color: #3b3e52 !important;
+  color: #ffffff !important;
+}
+
+.btn-dark:hover {
+  background-color: #323548 !important;
+  border-color: #484c63 !important;
+  color: #ffffff !important;
+}
+
+/* Formularios */
+.form-label {
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  color: #ffffff !important;
+  margin-bottom: 6px !important;
+}
+
+.form-control, .form-select {
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border-color) !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 9px 13px !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: var(--bg-input) !important;
+  border-color: var(--color-red) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(153, 27, 27, 0.35) !important;
+}
+
+.form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Tabelas */
+.table-dark {
+  --bs-table-bg: var(--bg-card) !important;
+  --bs-table-striped-bg: #151620 !important;
+  --bs-table-hover-bg: #1c1e2b !important;
+  --bs-table-border-color: var(--border-color) !important;
+  color: #ffffff !important;
+}
+
+.table th {
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid var(--border-color) !important;
+  padding: 12px 14px !important;
+}
+
+.table td {
+  font-size: 0.92rem !important;
+  vertical-align: middle !important;
+  padding: 12px 14px !important;
+}
+
+/* Badges */
+.badge.bg-danger {
+  background-color: var(--color-red) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.border-danger {
+  border-color: var(--color-red) !important;
+}
+
+/* Botoes da chamada */
+.attendance-toggle {
+  font-weight: 600 !important;
+  min-width: 110px !important;
+  transition: all 0.15s ease !important;
+}
+
+.attendance-present {
+  background-color: #1f212f !important;
+  border: 1px solid #3b3e52 !important;
+  color: #ffffff !important;
+}
+
+.attendance-present:hover {
+  background-color: #292c3e !important;
+  border-color: var(--color-red) !important;
+}
+
+.attendance-absent {
+  background-color: var(--color-red) !important;
+  border: 1px solid var(--color-red) !important;
+  color: #ffffff !important;
+}
+
+.attendance-absent:hover {
+  background-color: var(--color-red-hover) !important;
+}
+
+/* Celulas do calendario */
+.calendar-day-cell:hover {
+  background-color: rgba(153, 27, 27, 0.35) !important;
+  border-color: var(--color-red) !important;
+}
+
+.calendar-day-cell.active {
+  background-color: var(--color-red) !important;
+  border-color: var(--color-red) !important;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none !important;
+  }
+  .content-container {
+    padding: 18px 14px !important;
+  }
+}
